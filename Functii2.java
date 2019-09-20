@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Functii2 {
-	static double raza;
+	static float raza;
 	final static double PI = 3.14;
 
 	public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class Functii2 {
 		Scanner Dscan =new Scanner(System.in);
 		
 		System.out.println("Care e diametrul ");
-		double diameter = Dscan.nextFloat();
+		float diameter = Dscan.nextFloat();
 		
 		raza= diameter/2;
 		
@@ -17,9 +17,9 @@ public class Functii2 {
 		
 		System.out.println("cate rotatii pe minut ai? ");
 		
-		double RPM = RPMscan.nextFloat();
+		float RPM = RPMscan.nextFloat();
 		
-		double RPS=RPM/60;
+		float RPS=RPM/60;
 		
 		double rez=distanta(raza,RPS);
 		System.out.println("distanta parcursa este de "+rez+"cm");
@@ -27,7 +27,7 @@ public class Functii2 {
 
 	}
 
-	static double distanta (double raza,double RPS)
+	static double distanta (float raza,float RPS)
 	{
 		double rez;
 		return  rez=2*PI*raza*RPS;
