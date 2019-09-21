@@ -1,0 +1,115 @@
+import java.util.Scanner;
+
+
+public class Calculator{
+	public static int n;
+	public static int cancel;
+	public static double m;
+	
+
+	public static void main(String[] args) {
+	
+		
+		Scanner scan = new Scanner(System.in);
+	    System.out.println("enter number " );
+	    long n = scan.nextInt();
+		
+		 cancel=0;        
+        while(cancel != 1) 		{
+        	System.out.println("the number is="+n+" \n " );
+        	Scanner fnScan = new Scanner(System.in);
+        	
+        	System.out.println("choose function:");
+        	System.out.println("add=1");
+        	System.out.println("subtract=2");
+        	System.out.println("multiply=3");
+        	System.out.println("divide=4");
+        	int fnSelect=fnScan.nextInt();    //nu stiu cine ce ia facut da lai vazut ca merge,nu da vina pe mine :(
+        																									   	
+        	if(fnSelect==1) {
+        		Scanner plusScan = new Scanner(System.in);
+                System.out.println("enter  number to add");
+                int plus = plusScan.nextInt();
+        	
+        	System.out.println("the result is:"+adunare(n,plus));
+        	n=adunare(n,plus);
+        	
+        		
+        					}
+        	if(fnSelect==2) {
+        		Scanner minusScan = new Scanner(System.in);
+                System.out.println("enter number subtract by");
+                int minus = minusScan.nextInt();
+        	
+        	System.out.println("the result is:"+scadere(n,minus));
+        	n=scadere(n,minus);
+        	
+        		
+        					}
+        	
+        	if(fnSelect==3) {
+        		Scanner multiplyScan = new Scanner(System.in);
+                System.out.println("enter  number to multiply ");
+                int multiply = multiplyScan.nextInt();
+        	
+        	System.out.println("the result is:"+multiply(n,multiply));
+        	n=multiply(n,multiply);
+        	
+        		
+        					}
+        	if(fnSelect==4) {
+        		Scanner divideScan = new Scanner(System.in);
+                System.out.println("enter  number to divide by ");
+                double divide = divideScan.nextInt();
+        	
+        	System.out.println("the result is:"+divide(n,divide));
+        	m=divide(n,divide);
+        	
+        		
+        					}
+        	
+        	Scanner cancelScan =new Scanner(System.in);//obj scanner
+    		System.out.println("to continue press 1");
+    		System.out.println("to cancel press 2");
+    		int cancel = cancelScan.nextInt();
+        	if(cancel == 2)
+        	{System.out.println("Luca barbu a scris acest cod btw");
+        		System.exit(0);}
+        						}
+        
+											}
+	static	long adunare(long n,long plus) 
+	{
+		
+		
+        return n+plus;
+        
+	}
+	static	long scadere(long nmbr,long minus) 
+	{
+		
+		
+        return nmbr=nmbr-minus;
+        
+	}
+	static	long multiply(long nmbr,long multiply) 
+	{
+		
+		
+        return nmbr=nmbr*multiply;
+        
+	}
+	static	double divide(double nmbr,double divide) 
+	{
+		
+		
+        return nmbr=nmbr/divide;
+        
+	}
+	
+	
+	
+	
+	
+ 
+}
